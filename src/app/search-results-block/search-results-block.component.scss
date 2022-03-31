@@ -1,0 +1,9 @@
+.main {
+  border: 1px solid green;
+  width: calc(100vw - 240px);
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
