@@ -11,5 +11,30 @@ export class SearchResultItemComponent implements OnInit {
 
   @Input() card!: SearchItem;
 
-  ngOnInit(): void {}
+  checkPublishing(date: string) {
+    const DAYS = 7;
+    const MONTH = 1;
+    const HALFYEAR = 0.5;
+
+    const currentDate = new Date();
+    const cardDate = new Date(date);
+
+    if (cardDate.getDate() < currentDate.getDate() - DAYS) {
+      return 'blue';
+    }
+
+    if (cardDate.getMonth() < currentDate.getMonth() - MONTH) {
+      return 'green';
+    }
+
+    if (cardDate.getFullYear() < currentDate.getFullYear() - HALFYEAR) {
+      return 'red';
+    }
+
+    return 'black';
+  }
+
+  ngOnInit(): void {
+    // this.checkPublishing(this.card.snippet.publishedAt);
+  }
 }

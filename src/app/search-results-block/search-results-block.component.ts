@@ -11,7 +11,5 @@ export class SearchResultsBlockComponent implements OnInit {
 
   cards = data.items;
 
-  ngOnInit(): void {
-    console.log(this.cards);
-  }
+  ngOnInit(): void {}
 }

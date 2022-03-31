@@ -29,7 +29,12 @@
 
   <h3 class="card-title">{{ card.snippet.title }}</h3>
 
-  <button mat-raised-button color="primary">more...</button>
+  <button class="card-button" mat-raised-button color="primary">more...</button>
 
-  <div class="card-age"></div>
+  <div
+    class="card-age"
+    [class.blue]="checkPublishing(card.snippet.publishedAt) === 'blue'"
+    [class.red]="checkPublishing(card.snippet.publishedAt) === 'red'"
+    [class.gren]="checkPublishing(card.snippet.publishedAt) === 'green'"
+  ></div>
 </article>
