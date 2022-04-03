@@ -7,17 +7,17 @@
       height="50px"
       width="50px"
     />
-    <div>
+    <form (submit)="displayResultBlock()">
       <input type="text" class="search-form-input" />
       <button
-        (click)="displayResultBlock()"
+        type="submit"
         class="search-form-button"
         mat-raised-button
         color="primary"
       >
         search
       </button>
-    </div>
+    </form>
     <img
       (click)="toggleClick()"
       class="header-img"
