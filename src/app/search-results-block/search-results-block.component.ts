@@ -1,15 +1,16 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { data } from './mokedData';
+import { SearchItem } from '../types/search-item';
 
 @Component({
   selector: 'app-search-results-block',
   templateUrl: './search-results-block.component.html',
   styleUrls: ['./search-results-block.component.scss'],
 })
-export class SearchResultsBlockComponent implements OnInit {
+export class SearchResultsBlockComponent {
   constructor() {}
 
-  cards = data.items;
-
-  ngOnInit(): void {}
+  @Input() searchQuery: string;
+  @Input() cards: SearchItem[];
+  @Input() dateSortDirection: false | 0 | 1;
+  @Input() viewsSortDirection: false | 0 | 1;
 }

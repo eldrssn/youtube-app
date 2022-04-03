@@ -1,9 +1,19 @@
 <section class="filter">
   <p class="filter-header">Sorting by:</p>
-  <span class="filter-item filter-item-link">date</span>
-  <span class="filter-item filter-item-link">count of view</span>
+  <span (click)="setSortByDate()" class="filter-item filter-item-link"
+    >date</span
+  >
+  <span (click)="setSortByViews()" class="filter-item filter-item-link"
+    >count of view</span
+  >
   <div class="filter-item">
     <span>by word or sentance</span>
-    <input matInput class="filter-input" type="text" />
+    <input
+      [(ngModel)]="query"
+      (input)="setSortByQuery(query)"
+      matInput
+      class="filter-input"
+      type="text"
+    />
   </div>
 </section>

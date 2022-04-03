@@ -1,3 +1,19 @@
-<app-header></app-header>
-<app-filters></app-filters>
-<app-search-results-block></app-search-results-block>
+<app-header
+  (toggleFilterClick)="toggleFilter()"
+  (displayResultBlockClick)="displayResultBlock()"
+>
+</app-header>
+<app-filters
+  (setSortByQueryInput)="setSortByQuery($event)"
+  (setSortByDateClick)="setSortByDate()"
+  (setSortByViewsClick)="setSortByViews()"
+  *ngIf="isDisplayFilter"
+></app-filters>
+
+<app-search-results-block
+  *ngIf="isDisplayResultBlock"
+  [searchQuery]="searchQuery"
+  [dateSortDirection]="dateSortDirection"
+  [viewsSortDirection]="viewsSortDirection"
+  [cards]="cards"
+></app-search-results-block>

@@ -1,4 +1,6 @@
-export const data = JSON.parse(
+import { ResultList } from 'src/app/types/result-list';
+
+export const data: ResultList = JSON.parse(
   JSON.stringify({
     kind: 'youtube#videoListResponse',
     etag: '"Fznwjl6JEQdo1MGvHOGaz_YanRU/Cmodw7c5XPTM8Yg3kMXelihxek4"',

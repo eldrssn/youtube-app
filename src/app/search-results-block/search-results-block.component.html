@@ -1,6 +1,11 @@
 <main class="main">
   <app-search-result-item
-    *ngFor="let card of cards"
+    *ngFor="
+      let card of cards
+        | sortByQuery: searchQuery
+        | sortByDate: dateSortDirection
+        | sortByViews: viewsSortDirection
+    "
     [card]="card"
   ></app-search-result-item>
 </main>

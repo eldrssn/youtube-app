@@ -6,7 +6,7 @@ import { SearchItem } from '../types/search-item';
   templateUrl: './search-result-item.component.html',
   styleUrls: ['./search-result-item.component.scss'],
 })
-export class SearchResultItemComponent implements OnInit {
+export class SearchResultItemComponent {
   constructor() {}
 
   @Input() card!: SearchItem;
@@ -32,9 +32,5 @@ export class SearchResultItemComponent implements OnInit {
     }
 
     return 'black';
-  }
-
-  ngOnInit(): void {
-    // this.checkPublishing(this.card.snippet.publishedAt);
   }
 }

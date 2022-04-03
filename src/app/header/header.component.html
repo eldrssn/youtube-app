@@ -7,13 +7,22 @@
       height="50px"
       width="50px"
     />
-    <form>
-      <input class="search-form-input" type="text" />
-      <button class="search-form-button" mat-raised-button color="primary">
+    <div>
+      <input type="text" class="search-form-input" />
+      <button
+        (click)="displayResultBlock()"
+        class="search-form-button"
+        mat-raised-button
+        color="primary"
+      >
         search
       </button>
-    </form>
-    <img class="header-img" src="/assets/icons/search_settings.png" />
+    </div>
+    <img
+      (click)="toggleClick()"
+      class="header-img"
+      src="/assets/icons/search_settings.png"
+    />
   </div>
   <div class="login">
     <p class="login-name">Your name</p>
