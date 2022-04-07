@@ -1,5 +1,5 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { SearchItem } from '../types/search-item';
+import { Component, Input } from '@angular/core';
+import { SearchItem } from '../../../types/search-item';
 
 @Component({
   selector: 'app-search-results-block',
