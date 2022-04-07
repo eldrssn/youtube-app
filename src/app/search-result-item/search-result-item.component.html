@@ -1,0 +1,40 @@
+<article class="card">
+  <img
+    class="card-img"
+    src="{{ card.snippet.thumbnails.medium.url }}"
+    alt="title"
+  />
+  <div class="card-thumbnail">
+    <div class="card-thumbnail-item">
+      <img src="/assets/icons/viewed.png" alt="" /><span>{{
+        card.statistics.viewCount
+      }}</span>
+    </div>
+    <div class="card-thumbnail-item">
+      <img src="/assets/icons/liked.png" alt="" /><span>{{
+        card.statistics.likeCount
+      }}</span>
+    </div>
+    <div class="card-thumbnail-item">
+      <img src="/assets/icons/dislike.png" alt="" /><span>{{
+        card.statistics.dislikeCount
+      }}</span>
+    </div>
+    <div class="card-thumbnail-item">
+      <img src="/assets/icons/comments.png" alt="" /><span>{{
+        card.statistics.commentCount
+      }}</span>
+    </div>
+  </div>
+
+  <h3 class="card-title">{{ card.snippet.title }}</h3>
+
+  <button class="card-button" mat-raised-button color="primary">more...</button>
+
+  <div
+    class="card-age"
+    [class.blue]="checkPublishing(card.snippet.publishedAt) === 'blue'"
+    [class.red]="checkPublishing(card.snippet.publishedAt) === 'red'"
+    [class.gren]="checkPublishing(card.snippet.publishedAt) === 'green'"
+  ></div>
+</article>

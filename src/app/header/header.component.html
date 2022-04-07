@@ -1,0 +1,31 @@
+<header class="header">
+  <div class="header-elements">
+    <img
+      class="header-img"
+      src="/assets/icons/logo.png"
+      alt="logo"
+      height="50px"
+      width="50px"
+    />
+    <form (submit)="displayResultBlock()">
+      <input type="text" class="search-form-input" />
+      <button
+        type="submit"
+        class="search-form-button"
+        mat-raised-button
+        color="primary"
+      >
+        search
+      </button>
+    </form>
+    <img
+      (click)="toggleClick()"
+      class="header-img"
+      src="/assets/icons/search_settings.png"
+    />
+  </div>
+  <div class="login">
+    <p class="login-name">Your name</p>
+    <img class="header-img" src="/assets/icons/login.png" />
+  </div>
+</header>

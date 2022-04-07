@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SearchItemIconsComponent } from './search-item-icons.component';
+import { SearchResultsBlockComponent } from './search-results-block.component';
 
-describe('SearchItemIconsComponent', () => {
-  let component: SearchItemIconsComponent;
-  let fixture: ComponentFixture<SearchItemIconsComponent>;
+describe('SearchResultsBlockComponent', () => {
+  let component: SearchResultsBlockComponent;
+  let fixture: ComponentFixture<SearchResultsBlockComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ SearchItemIconsComponent ]
+      declarations: [ SearchResultsBlockComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(SearchItemIconsComponent);
+    fixture = TestBed.createComponent(SearchResultsBlockComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

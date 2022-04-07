@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { CustomButtonComponent } from './custom-button.component';
+import { SearchResultItemComponent } from './search-result-item.component';
 
-describe('CustomButtonComponent', () => {
-  let component: CustomButtonComponent;
-  let fixture: ComponentFixture<CustomButtonComponent>;
+describe('SearchResultItemComponent', () => {
+  let component: SearchResultItemComponent;
+  let fixture: ComponentFixture<SearchResultItemComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ CustomButtonComponent ]
+      declarations: [ SearchResultItemComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(CustomButtonComponent);
+    fixture = TestBed.createComponent(SearchResultItemComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

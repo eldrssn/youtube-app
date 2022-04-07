@@ -1,0 +1,31 @@
+.filter {
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background-color: #E5E5E5;
+
+  &-header {
+    margin: 0 20px;
+    color: #929292;
+  }
+
+  &-item {
+    margin: 0 15px;
+    color: #2F80ED;
+  }
+
+  &-item-link {
+    text-decoration: underline;
+    cursor: pointer;
+  }
+
+  &-input {
+    width: 150px;
+    height: 13px;
+    border: none;
+    margin-left: 10px;
+  }
+}
+
